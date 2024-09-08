@@ -120,6 +120,8 @@ nav .logo h3 {
     }
  
     nav ul {
+
+        padding-top: 50px;
         position: absolute;
         right: 0;
         top:0;
@@ -128,7 +130,7 @@ nav .logo h3 {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        background-color: black;
+       background-color: rgb(178, 15, 47);
         z-index: -1;
         transform: translateX(100%);
         transition: all 1s;
