@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: rgb(178, 15, 47);
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+nav ul {
+    width: 40%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+ 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(202, 202, 202);
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+nav .logo h3 {
+    color: white;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+/* Checkbox menutupi menu-toggle button */
+.menu-toggle input {
+    position: absolute;
+    left: -3.2px;
+    cursor: pointer;
+    width: 35px;
+    height: 20px;
+    opacity: 0;
+    z-index: 999;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(202, 202, 202);
+    border-radius: 3px;
+    transition: 0.5s all;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+
+}
+.menu-toggle span:nth-child(3){
+    opacity: 1;
+}
+
+.menu-toggle span:last-child {
+    transform-origin: 0 100%;
+}
+
+/* Checkbox event handler */
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(0.5px, -6px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(0.5px ,5px);
+}
+
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+}
+
+
+/* Responsive Breakpoints */
+/* Tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 576px) {
+    nav ul {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+}
